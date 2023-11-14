@@ -1,0 +1,27 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li,
+ol li {
+    text-decoration: none;
+    list-style: none;
+}
+
+ul a,
+ol a {
+    text-decoration: none;
+    color: black;
+}
