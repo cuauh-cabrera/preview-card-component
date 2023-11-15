@@ -194,6 +194,11 @@ footer>p>a:visited {
     article {
         width: 100%;
         height: 70vh;
+        padding: 2rem;
+    }
+
+    article > button {
+        width: 50%;
     }
 
     .sedans {
