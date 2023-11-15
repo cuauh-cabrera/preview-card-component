@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Big Shoulders Display', 'Red Hat Display', sans-serif;
 }
 
 ul,
@@ -24,4 +24,153 @@ ul a,
 ol a {
     text-decoration: none;
     color: black;
+}
+
+/*Setup global vars*/
+:root {
+    --sedans-bkg: hsl(31, 77%, 52%);
+    --suvs-bkg: hsl(184, 100%, 22%);
+    --luxury--bkg: hsl(179, 100%, 13%);
+    --light-color: hsl(0, 0%, 95%);
+    --text-color: hsla(0, 0%, 100%, 0.75);
+    --header-font: 'Big Shoulders Display', sans-serif;
+    --par-font: 'Red Hat Display', sans-serif;
+}
+
+/*CONTAINER*/
+.container {
+    width: 100%;
+    background-color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*CARDS*/
+article {
+    width: 90%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+article>h1 {
+    width: 70%;
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: var(--light-color);
+    font-family: var(--header-font);
+    font-weight: 700;
+    text-align: start;
+}
+
+article>p {
+    width: 70%;
+    margin-left: 1rem;
+    font-family: var(--par-font);
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: start;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+article>figure {
+    width: 70%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+article>button {
+    cursor: pointer;
+    width: 40%;
+    border: solid 1px transparent;
+    border-radius: 1.75rem;
+    background-color: var(--light-color);
+    padding: 0.75rem;
+    margin-left: 0.75rem;
+    margin-bottom: 2rem;
+    font-size: 1em;
+    font-family: var(--par-font);
+    font-weight: 500;
+}
+
+/*CARD SPECS*/
+.sedans {
+    background-color: var(--sedans-bkg);
+    margin-top: 1rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.sedans>button {
+    color: var(--sedans-bkg);
+}
+
+.sedans>button:hover {
+    border: solid 1px var(--light-color);
+    background-color: var(--sedans-bkg);
+    color: var(--light-color);
+    font-weight: 700;
+}
+
+.suvs {
+    background-color: var(--suvs-bkg);
+}
+
+.suvs>button {
+    color: var(--suvs-bkg);
+}
+
+.suvs>button:hover {
+    border: solid 1px var(--light-color);
+    background-color: var(--suvs-bkg);
+    color: var(--light-color);
+    font-weight: 700;
+}
+
+.luxury {
+    background-color: var(--luxury--bkg);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.luxury>button {
+    color: var(--luxury-color);
+}
+
+.luxury>button:hover {
+    border: solid 1px var(--light-color);
+    background-color: var(--luxury--bkg);
+    color: var(--light-color);
+    font-weight: 700;
+}
+
+/*FOOTER*/
+footer {
+    border: none;
+    width: 100%;
+    margin-top: 0;
+    background-color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer>p {
+    font-family: var(--par-font);
+}
+
+footer>p>a {
+    text-decoration: none;
+    font-family: var(--par-font);
+}
+
+footer>p>a:visited {
+    color: var(--luxury-color);
 }
